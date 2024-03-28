@@ -1,0 +1,24 @@
+{
+    "dogs": [
+      {
+        "id": 1,
+        "name": "Luca",
+        "breed": "Cane Corso",
+        "image": "https://i0.wp.com/smdp.com/wp-content/uploads/2023/07/Macey_Grey_-_Dog-scaled.jpg?fit=1200%2C1600&ssl=1",
+        "housetrained": true
+      },
+      {
+        "id": 2,
+        "name": "Marty",
+        "breed": "Doberman Pinscher",
+        "image": "https://media-eu.husse.com/media/f4/b9/54/1610355520/iStock-943768180.jpg",
+        "housetrained": false
+      },
+      {
+        "id": 3,
+        "breed": "Chocolate Lab",
+        "image": "https://cdn-fkidk.nitrocdn.com/iTZZWgOohhZqcpLLhJUgEqJelwRRhzdv/assets/images/optimized/rev-1f42eee/chocolatelabradorretriever.ca/wp-content/uploads/2022/07/cute-chocolate-lab-puppy-740x1024.jpg",
+        "housetrained": true
+      }
+    ]
+  }
