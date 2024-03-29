@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Page.css"
 
 function RehomeForm(){
+    const navigate = useNavigate()
     const [newDog,setNewDog] = useState({
         name:"",
         breed:"",
@@ -34,7 +36,10 @@ function RehomeForm(){
             body: JSON.stringify(formData)
         })
         .then((res)=> res.json())
-        .then((data) => console.log(data))
+        .then((data) => {
+            console.log(data)
+            navigate("/Adopt")
+        })
         setNewDog({
             name:"",
             breed:"",
