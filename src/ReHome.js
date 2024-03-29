@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import "./Page.css"
+import RehomeForm from "./RehomeForm";
 
 function Rehome(){
     return (

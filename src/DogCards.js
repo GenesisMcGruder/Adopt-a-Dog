@@ -1,14 +1,20 @@
 import React from "react";
 
-function DogCards(){
-    
+function DogCards({dog}){
+    const {name, breed, image, age, housetrained} = dog
+
+    function handleClick(){
+        return alert("Thanks for your interest!")
+    }
     return (
-        <>
-        {/* <img src=""/> */}
-        <h3>name</h3>
-        <h4>breed</h4>
-        <h4>housetrained</h4>
-        </>
+        <div className="dogcard">
+        <img className="dog-img"src={image} alt="dog img"/>
+        <h3>{name}</h3>
+        <h5>Breed: {breed}</h5>
+        <h5>Age: {age}</h5>
+        {housetrained? <h5>Housetrained: Yes</h5>: <h5>Housetrained:No</h5>}
+        <button className="adopt-me" onClick={handleClick}>Adopt Me</button>
+        </div>
     )
 }
 
