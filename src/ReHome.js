@@ -1,13 +1,18 @@
 import React from "react";
 import NavBar from "./NavBar";
+import "./Page.css"
 
 function Rehome(){
     return (
         <>
-        <header>
+        <div className="header">
+            <header>
             <NavBar/>
-        </header>
-        <main>
+            </header>  
+            <h1>Rehome</h1>
+        </div>
+        
+        <main className="message">
             Need to rehome a furry friend?
         </main>
         </>

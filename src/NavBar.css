@@ -4,13 +4,13 @@
     width: 60px;
     padding: 5px;
     margin: 0 6px 6px;
-    background: #b2c0f0c0;
+    background: #363a48f6;
     text-decoration: none;
     text-align: center;
     font-size: min(10vw, 15px) ;
-    color: black;
+    color: white;
 }
 
 .active {
-    color: #08154550;
+    color: #eef0f450;
 }
