@@ -7,33 +7,61 @@ function RehomeForm(){
         breed:"",
         age:"",
         image:"",
-        housetrained: true
+        housetrained: false
     })
+
+    function handleChange(e){
+        const value = e.target.type === "checkbox" ? e.target.checked : e.target.value
+        setNewDog({
+            ...newDog, [e.target.name]: value
+        })
+    }
 
     function handleSubmit(e){
         e.preventDefault()
-        const formData ={
-            name,
-            breed,
-            age,
-            image,
-            housetrained
+        const formData = {
+            name: newDog.name,
+            breed: newDog.breed,
+            age: newDog.age,
+            image: newDog.image,
+            housetrained: newDog.housetrained
         }
-        console.log(formData)
+        fetch('http://localhost:3000/dogs', {
+            method:"POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then((res)=> res.json())
+        .then((data) => console.log(data))
     }
 
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Name:</label>
-            <input type="text"
-            id="name"
-            value={formData.name}
-            onChange={(e)=> setNewDog({...newDog, name:e.target.value})}/>
+            <input name="name" 
+            type="text"
+            value={newDog.name}
+            onChange={handleChange}/><br/>
             <label>Breed:</label>
-            <input type="text"
-            id="breed"
-            value={formData.breed}
-            onChange={(e)=>setNewDog({...newDog, breed:e.target.value})}/>
+            <input name="breed"
+            type="text"
+            onChange={handleChange}/><br/>
+            <label>Age:</label>
+            <input name="age"
+            type="text"
+            onChange={handleChange}/><br/>
+            <label>Image:</label>
+            <input name="image"
+            type="text"
+            onChange={handleChange}/><br/>
+            <label>Housetrained:</label>
+            <input name="housetrained"
+             type="checkbox"
+             onChange={handleChange}
+            /><br/>
+            <input type="submit"/><br/>
         </form>
     )
 }
