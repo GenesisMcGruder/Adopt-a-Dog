@@ -16,6 +16,7 @@ function Rehome(){
         <main className="message">
             Need to rehome a furry friend?
         </main>
+        <br></br>
         <RehomeForm />
         </>
     )

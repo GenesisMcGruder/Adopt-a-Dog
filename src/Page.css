@@ -29,3 +29,35 @@
 .dogcard .adopt-me{
     background-color: rgb(220, 186, 240);
 }
+
+.form-case{
+    width: 360px;
+    height: 620px;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.form-case .form{
+    width: 300px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.form-case .form .form-input{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+}
+
+.form-case .form .form-input-submit{
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid grey;
+    border-radius: 6px;
+    outline: none;
+    background-color:rgba(215, 170, 232, 0.481) ;
+}

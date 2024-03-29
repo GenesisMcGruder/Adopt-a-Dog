@@ -35,34 +35,53 @@ function RehomeForm(){
         })
         .then((res)=> res.json())
         .then((data) => console.log(data))
+        setNewDog({
+            name:"",
+            breed:"",
+            age:"",
+            image:"",
+            housetrained: false
+        })
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <label>Name:</label>
-            <input name="name" 
-            type="text"
-            value={newDog.name}
-            onChange={handleChange}/><br/>
-            <label>Breed:</label>
-            <input name="breed"
-            type="text"
-            onChange={handleChange}/><br/>
-            <label>Age:</label>
-            <input name="age"
-            type="text"
-            onChange={handleChange}/><br/>
-            <label>Image:</label>
-            <input name="image"
-            type="text"
-            onChange={handleChange}/><br/>
-            <label>Housetrained:</label>
-            <input name="housetrained"
-             type="checkbox"
-             onChange={handleChange}
-            /><br/>
-            <input type="submit"/><br/>
-        </form>
+        <div className="form-case">
+            <form className="form" onSubmit={handleSubmit}>
+                <label>Name:</label>
+                <input className="form-input"
+                name="name" 
+                type="text"
+                value={newDog.name}
+                onChange={handleChange}/><br/>
+                <label>Breed:</label>
+                <input className="form-input"
+                name="breed"
+                type="text"
+                value={newDog.breed}
+                onChange={handleChange}/><br/>
+                <label>Age:</label>
+                <input className="form-input"
+                name="age"
+                type="text"
+                value={newDog.age}
+                onChange={handleChange}/><br/>
+                <label>Image:</label>
+                <input className="form-input"
+                name="image"
+                type="text"
+                value={newDog.image}
+                onChange={handleChange}/><br/>
+                <label>Housetrained:</label>
+                <input
+                name="housetrained"
+                type="checkbox"
+                value={newDog.housetrained}
+                onChange={handleChange}
+                /><br/>
+                <input className="form-input-submit" type="submit"/><br/>
+            </form>
+        </div>
+
     )
 }
 
