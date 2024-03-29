@@ -40,13 +40,6 @@ function RehomeForm(){
             console.log(data)
             navigate("/Adopt")
         })
-        setNewDog({
-            name:"",
-            breed:"",
-            age:"",
-            image:"",
-            housetrained: false
-        })
     }
 
     return(
