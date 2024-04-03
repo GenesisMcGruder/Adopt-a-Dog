@@ -37,7 +37,7 @@ function RehomeForm(){
         })
         .then((res)=> res.json())
         .then((data) => {
-            console.log(data)
+            setNewDog(data)
             navigate("/Adopt")
         })
     }
