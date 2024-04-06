@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, {useContext } from "react";
 import "./Page.css"
 import DogCards from "./DogCards";
+import AppContext from "./AppContext";
 
 function Adopt(){
-    const [dogs,setDogs] = useState([])
 
-    useEffect(()=>{
-        fetch("http://localhost:3000/dogs")
-        .then((res)=> res.json())
-        .then((data)=> setDogs(data))
-    },[])
-
-    const adopteeList= dogs.map((dog)=> <DogCards key={dog.id} dog={dog}/>)
+    const context = useContext(AppContext)
+    
+    const adopteeList= context.dogs.map((dog)=> <DogCards key={dog.id} dog={dog}/>)
     return (
         <>
         <div className="header">

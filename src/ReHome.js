@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./Page.css"
 import RehomeForm from "./RehomeForm";
+import AppContext from "./AppContext";
 
 function Rehome(){
+    const context = useContext(AppContext)
+    console.log(context)
 
     return (
         <>
@@ -14,7 +17,7 @@ function Rehome(){
             Need to rehome a furry friend?
         </main>
         <br></br>
-        <RehomeForm/>
+        <RehomeForm addNewDog={context.addNewDog}/>
         </>
     )
 }
