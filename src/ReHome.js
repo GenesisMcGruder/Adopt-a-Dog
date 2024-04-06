@@ -3,6 +3,7 @@ import "./Page.css"
 import RehomeForm from "./RehomeForm";
 
 function Rehome(){
+
     return (
         <>
         <div className="header"> 
@@ -13,7 +14,7 @@ function Rehome(){
             Need to rehome a furry friend?
         </main>
         <br></br>
-        <RehomeForm />
+        <RehomeForm/>
         </>
     )
 }

@@ -4,6 +4,7 @@ import "./Page.css"
 
 function RehomeForm(){
     const navigate = useNavigate()
+   // const addDog = useOutletContext()
     const [newDog,setNewDog] = useState({
         name:"",
         breed:"",
@@ -39,6 +40,7 @@ function RehomeForm(){
         .then((data) => {
             console.log(data)
             navigate("/Adopt")
+            //addDog(data)
         })
     }
 
