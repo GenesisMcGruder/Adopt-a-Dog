@@ -5,7 +5,7 @@ import "./NavBar.css"
 
 function NavBar(){
     return(
-        <nav>
+        <nav className="background">
             <NavLink to="/"
             className="nav-link">
                 Home

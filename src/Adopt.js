@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "./NavBar";
 import "./Page.css"
 import DogCards from "./DogCards";
 
@@ -16,9 +15,6 @@ function Adopt(){
     return (
         <>
         <div className="header">
-        <header>
-            <NavBar/>
-        </header>
         <h1>Adopt</h1>
         </div>
         <br></br>

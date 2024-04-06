@@ -3,25 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Adopt from './Adopt';
-import ReHome from './ReHome';
-import Home from './Home';
+import routes from "./routes"
 
+const router = createBrowserRouter(routes);
 
-const router = createBrowserRouter([
-  {
-    path:"/",
-    element:<Home/>
-  },
-  {
-    path:"/Adopt",
-    element: <Adopt/>
-  },
-  {
-    path:"/ReHome",
-    element:<ReHome/>
-  }
-])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<RouterProvider router={router}/>);
 

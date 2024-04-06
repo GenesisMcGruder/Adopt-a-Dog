@@ -1,14 +1,11 @@
 import React from "react";
-import NavBar from "./NavBar";
 import "./Page.css"
 
 function Home(){
+
     return (
         <>
         <div className="header">
-        <header>
-            <NavBar/>
-        </header>
         <h1>Welcome!</h1>
         </div>
         <br></br>

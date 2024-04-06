@@ -1,11 +1,14 @@
-import React from 'react';
-import Home from './Home';
+import NavBar from "./NavBar";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-      <div>
-        <Home/>
-      </div>
+      <>
+        <header>
+            <NavBar />
+        </header>
+        <Outlet />
+      </>
   );
 }
 
